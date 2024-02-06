@@ -13,9 +13,9 @@
 
 <body>
     <!-- Represents a set of navigational links -->
-    <header> <!-- Semantic Tag -->
+    <header role="banner"> <!-- Banner landmark --> <!-- Semantic Tag -->
         <div class="wrapper"> <!-- Wraps logo and navigational links for CSS styling -->
-            <nav aria-label="Main Navigation">
+            <nav aria-label="Main Navigation"> <!-- Navigation landmark -->
                 <!-- logo -->
                 <div class="logo">
                     <img src="/Images/01 Logos and Icons/BackGPT Logo/BackGPT_Logo_Black_V2.svg" alt="BackGPT" 
@@ -24,14 +24,14 @@
                 <ul class="nav-items">
                     <!-- Home icon -->
                     <li class="icon">
-                        <a href="#home" aria-label="Home goes to home of chatbot and frequent prompts"><img src="Images/01 Logos and Icons/Header Nav Icons/Active.svg" alt="Home"></a>
+                        <a href="#home" role="button" aria-label="Home goes to home of chatbot and frequent prompts"><img src="Images/01 Logos and Icons/Header Nav Icons/Active.svg" alt="Home"></a>
                     </li>
                     <!-- Text links -->
                     <li class="nav-item">
-                        <a href="#mystory" aria-label="My Story is a link to the story of how BackGPT was created">My Story</a>
+                        <a href="#mystory" role="button" aria-label="My Story is a link to the story of how BackGPT was created">My Story</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#relief" aria-label="Relief is a link to products that provide relief from back pain">Relief</a>
+                        <a href="#relief" role="button" aria-label="Relief is a link to products that provide relief from back pain">Relief</a>
                     </li>
                 </ul>
             </nav>
@@ -39,7 +39,13 @@
         </div>
     </header>
     <!-- Rest of your body content -->
-</body>
+
+    <main role="main"> <!-- Main landmark -->
+        <!-- Main content -->
+    </main>
+    <footer role="contentinfo"> <!-- Contentinfo landmark -->
+        <!-- Footer content -->
+    </footer>
 
  
     
