@@ -1,0 +1,157 @@
+/* HTML5 Doctor Reset Stylesheet */
+/* Starting with a reset stylesheet is a best practice. It ensures a consistent baseline across all browsers */
+
+/* Reset Stylesheet: This is like setting up your canvas in Figma. You're removing any default styling that 
+   browsers apply, so you have a clean and consistent starting point. Just like in Figma, where you have control 
+   over every aspect of your design, the reset stylesheet gives you control over the browser's default styles.
+
+/* This reset stylesheet aims to reduce browser inconsistencies in things like default line heights, margins, 
+   and font sizes of headings, and so on. The general reasoning behind this was to strip out user agent styles 
+   before applying your own styles. */
+
+/* Global Reset Styles */
+/* The following rules apply a basic reset to commonly used HTML elements. 
+   They remove margins, paddings, borders, and outlines, set font-size to 100% (default size), 
+   align text and other inline elements to the baseline, and make backgrounds transparent. 
+   This creates a consistent baseline across all browsers. */
+   html, body, div, span, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   abbr, address, cite, code,
+   del, dfn, em, img, ins, kbd, q, samp,
+   small, strong, sub, sup, var,
+   b, i,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, figcaption, figure,
+   footer, header, hgroup, menu, nav, section, summary,
+   time, mark, audio, video {
+       margin:0;
+       padding:0;
+       border:0;
+       outline:0;
+       font-size:100%;
+       vertical-align:baseline;
+       background:transparent;
+   }
+   
+   /* Body Line Height */
+   /* Sets a default line-height for the body element. 
+      This value may need adjustment based on your design's typography. */
+   body {
+       line-height:1;
+   }
+   
+   /* Block Element Formatting */
+   /* Ensures newer HTML5 block-level elements are displayed as blocks, 
+      providing a correct box model for these elements in older browsers. */
+   article,aside,details,figcaption,figure,
+   footer,header,hgroup,menu,nav,section {
+       display:block;
+   }
+   
+   /* Navigation List Styling */
+   /* Removes list styling from unordered lists in navigation, 
+      a common practice for horizontal navigation menus. */
+   nav ul {
+       list-style:none;
+   }
+   
+   /* Blockquote and Quote Styling */
+   /* Removes default browser quotation styling for blockquotes and inline quotes. */
+   blockquote, q {
+       quotes:none;
+   }
+   
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+       content:'';
+       content:none;
+   }
+   
+   /* Anchor Tag Reset */
+   /* Removes margins, padding, and background from anchor tags, 
+      and resets font size and vertical alignment. 
+      Additional styling required to suit your design. */
+   a {
+       margin:0;
+       padding:0;
+       font-size:100%;
+       vertical-align:baseline;
+       background:transparent;
+   }
+   
+   /* Inserted Text Styling */
+   /* Sets a default style for inserted text. You can change the colors to match your design. */
+   ins {
+       background-color:#ff9;
+       color:#000;
+       text-decoration:none;
+   }
+   
+   /* Marked Text Styling */
+   /* Sets default styling for marked/highlighted text. 
+      Change the colors to match your design needs. */
+   mark {
+       background-color:#ff9;
+       color:#000;
+       font-style:italic;
+       font-weight:bold;
+   }
+   
+   /* Deleted Text Styling */
+   /* Applies a line-through style for deleted text elements. */
+   del {
+       text-decoration: line-through;
+   }
+   
+   /* Abbreviations and Definitions */
+   /* Styles for abbreviations and definitions, usually shown with a dotted underline. */
+   abbr[title], dfn[title] {
+       border-bottom:1px dotted;
+       cursor:help;
+   }
+   
+   /* Table Styling */
+   /* Collapses border spacing in tables and removes default spacing. */
+   table {
+       border-collapse:collapse;
+       border-spacing:0;
+   }
+   
+   /* Horizontal Rule Styling */
+   /* Sets a default style for horizontal rules (lines). 
+      Change the border color to match your design needs. */
+   hr {
+       display:block;
+       height:1px;
+       border:0;  
+       border-top:1px solid #cccccc;
+       margin:1em 0;
+       padding:0;
+   }
+   
+   /* Form Element Alignment */
+   /* Vertically aligns input fields and select boxes for better form layout. */
+   input, select {
+       vertical-align:middle;
+   }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

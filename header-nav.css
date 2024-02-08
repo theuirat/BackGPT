@@ -1,0 +1,120 @@
+
+/* STRUCTURAL CSS YEWWWW */
+/*
+
+
+/* Mobile First Navigation bar */
+
+/* Responsive Navigation Styles */
+/* Mobile and Tablet (default navigation styles) */
+.logo,
+.icon {
+    display: block; /* Show logo and icon */
+}
+.nav-item {
+    display: none; /* Hide text links by default */
+}
+
+/* Mobile First Navigation bar */
+nav {
+    display: flex;
+    width: calc(100% - 32px); /* Subtracting left and right margins from total width */
+    height: 88px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 56px 16px; /* 16px margin on top/bottom and left/right */
+    flex-shrink: 0;
+    /* Additional mobile-specific nav styles if necessary */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    display: block;
+    /* Additional anchor styles if necessary */
+}
+
+
+/* Tablet Adjustments for Navigation Bar */
+@media (min-width: 768px) {
+    nav {
+        width: calc(100% - 96px); /* Subtracting left and right margins from total width */
+        margin: 88px 48px; /* 48px margin on left and right */
+        padding: 0; /* Reset padding if necessary */
+        /* Additional tablet-specific nav styles if necessary */
+    }
+}
+
+/* Desktop Adjustments for Navigation Bar */
+@media (min-width: 1025px) {
+    /* Adjustments for desktop */
+    nav {
+        width: calc(100% - 160px); /* Adjusting width to account for padding */
+        margin: 80px; /* Uniform margin of 80px for desktop */
+    }
+
+    /* Show text links on desktop */
+    .nav-item {
+        display: block;
+    }
+    /* Additional desktop-specific nav styles if necessary */
+}
+
+
+
+/* DECORATIVE CSS YEWWWW */
+/* HEADER BG NAV States */
+/*  1. .default State - White BG w black text/icon w no bottom 
+    2. .current - White BG w Bottom Border w gradient text/icon 
+    3.  Hovered - gradient text
+    4. Active - gradient text and background w bottom border */
+
+/*  1. .default State - non-interactive state */
+.nav-items li a {
+    display: flex; /* Arranges children (e.g., text, icon) inline and centered */
+    height: 88px; /* Sets the height of each navigation item */
+    padding: 24px; /* Adds padding inside each navigation item */
+    justify-content: center; /* Centers children horizontally in the flex container */
+    align-items: center; /* Centers children vertically in the flex container */
+    gap: 24px; /* Space between each child element inside the navigation item */
+    text-decoration: none; /* Removes underline from links */
+    background-color: var(--white-background); /* Sets background color to white */
+    color: var(--black-background); /* Sets text/icon color to black */
+    border: none; /* No border by default */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for color and background changes */
+    position: relative; /* Positioning context for pseudo-elements or child elements */
+}
+
+/*  2. .current State - current page selected */
+.nav-items li a.current {
+    display: flex; /* Arranges children (e.g., text, icon) inline and centered */
+    height: 88px; /* Sets the height of each navigation item */
+    padding: 24px; /* Adds padding inside each navigation item */
+    justify-content: center; /* Centers children horizontally in the flex container */
+    align-items: center; /* Centers children vertically in the flex container */
+    gap: 24px; /* Space between each child element inside the navigation item */
+    text-decoration: none; /* Removes underline from links */
+    background-color: var(--white-background); /* Keeps background color white */
+    color: transparent; /* Sets text color to transparent */
+    -webkit-background-clip: text; /* Applies background (gradient) only to text */
+    background-clip: text; /* Applies background (gradient) only to text */
+    background-image: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end)); /* Gradient for text */
+    border-bottom: 4px solid transparent; /* Adds a transparent bottom border */
+    border-image: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end)) 1; /* Gradient for bottom border */
+    transition: background-color 0.3s, border-bottom-color 0.3s; /* Smooth transition for background and border changes */
+    position: relative; /* Positioning context for pseudo-elements or child elements */
+}
+
+
+
+ /*  3. .hovered State - when a user hovers on an item */       
+
+
+ /*  4. .active State - when the item is being clicked or in focus */
