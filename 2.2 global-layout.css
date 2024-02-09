@@ -1,4 +1,4 @@
-/* Global Box Model Setting */
+/* Global Layout and Box Model Setting */
 
 /*Box Sizing: The box-sizing: border-box; setting makes it easier to design UIs because it ensures that 
 padding and borders are included within the element's dimensions. This means when you set a width and 
@@ -54,18 +54,21 @@ in Figma, providing a structured way to layout elements in a responsive and flex
         }
     }
     
-/* Desktop Specific Styles */
-@media (min-width: 1025px) {
-    .container {
-        padding: 0 80px; /* Padding for desktop */
-        max-width: 1320px; /* Max width for the container */
-        margin: 0 auto; /* Centering the container */
-    }
+    /* Desktop Specific Styles */
+    @media (min-width: 1025px) {
+        /* Container: Used for wrapping and centering content on the page */
+        .container {
+            max-width: 1320px; /* Sets the maximum width of the container */
+            margin: 0 auto; /* Centers the container horizontally */
+            padding: 0 80px; /* Adds horizontal padding */
+        }
 
-    nav {
-        width: 100%; /* Full width of its container */
-        max-width: 1320px; /* Max width for the navigation bar */
-        margin: 88px auto; /* Top/Bottom margin for desktop and auto margins for horizontal centering */
-        padding: 0; /* Resetting padding */
-    }
+        /* Grid Container: Defines a grid layout for sections that require a grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr); /* Creates a 12-column grid */
+            grid-gap: 16px; /* Sets the gap between grid items */
+            /* Add any additional grid styling as needed */
+        }
+
 }
