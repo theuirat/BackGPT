@@ -1,6 +1,11 @@
 /* HTML5 Doctor Reset Stylesheet */
 /* Starting with a reset stylesheet is a best practice. It ensures a consistent baseline across all browsers */
 
+/* Global box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Reset Stylesheet: This is like setting up your canvas in Figma. You're removing any default styling that 
    browsers apply, so you have a clean and consistent starting point. Just like in Figma, where you have control 
    over every aspect of your design, the reset stylesheet gives you control over the browser's default styles.
