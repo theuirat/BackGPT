@@ -1,25 +1,32 @@
+/* class based */
+
 /* 3.0 Header Navigation CSS */
 
 /* This is the parent container for your header. It's a flex container with two flex items: the logo and the navigation items. */
 
+
+.container {
+  
+}
+
 .header-container {
-    display: flex;
-    width: calc(100% - 160px); /* Subtract left and right margins from width */
-    height: 88px;
-    justify-content: space-between; /* space between the logo and the navigation items */
-    align-items: center; /* Center the items vertically */
-    flex-direction: row; /* Align items horizontally */
-    flex-wrap: nowrap; /* Add this line */
-    flex-shrink: 0;
-    margin: 88px 80px;
-    background: var(--white-background);
+  display: flex;
+  width: calc(100% - 160px); /* Subtract left and right margins from width */
+  height: 88px;
+  justify-content: space-between; /* space between the logo and the navigation items */
+  align-items: center; /* Center the items vertically */
+  flex-direction: row; /* Align items horizontally */
+  flex-wrap: nowrap; /* Add this line */
+  flex-shrink: 0;
+  margin: 88px 80px;
+  background: var(--white-background);
 }
 
 /* This is the logo (child and flex item 1). It's always visible. */
 
 .logo-container img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* These are the navigation items. 
@@ -27,52 +34,50 @@ On desktop and tablet, all items are visible.
 On mobile, only the home icon is visible. */
 
 .nav-list {
-    display: flex;
-    height: 88px;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 24px;
-    margin-left: auto; /* Add this line */
+  display: flex;
+  height: 88px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 24px;
+  margin-left: auto; /* Add this line */
 }
 
 .home-link {
-    display: flex;
-    width: 88px; /* Set the width of the icon container */
-    height: 88px; /* Set the height of the icon container */
-    padding: 24px; /* Add padding */
-    justify-content: center; /* Center the icon horizontally */
-    align-items: center; /* Center the icon vertically */
-    gap: 24px; /* Add gap */
+  display: flex;
+  width: 88px; /* Set the width of the icon container */
+  height: 88px; /* Set the height of the icon container */
+  padding: 24px; /* Add padding */
+  justify-content: center; /* Center the icon horizontally */
+  align-items: center; /* Center the icon vertically */
+  gap: 24px; /* Add gap */
 }
 
 .home-link img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Media query for mobile screens. */
 
 @media (max-width: 768px) {
-    .nav-list > *:not(.home-link) {
-        display: none; /* Hide all items except the home icon on mobile. */
-    }
+  .nav-list > *:not(.home-link) {
+    display: none; /* Hide all items except the home icon on mobile. */
+  }
 }
 
 /* This is the "skip to main content" link. It's hidden offscreen and only becomes visible when it receives focus. This allows keyboard users to skip over the navigation and start interacting with the main content immediately. */
 
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
 }
 
 .skip-link:focus {
-    top: 0;
+  top: 0;
 }
-
-
