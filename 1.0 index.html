@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+
+        <title>Navbar with Flexbox HTML CSS</title>
         <link rel="stylesheet" href="2.0 reset-stylesheet.css">
         <link rel="stylesheet" href="3.0 atomic-variables.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,35 +14,22 @@
         <link rel="stylesheet" href="4.0 global-layout.css">
         <link rel="stylesheet" href="5.0 header-nav.css">
     </head>
+   
     <body>
-        <a href="#mainContent" class="skip-link">Skip to main content</a>
-        <header id="siteHeader">
-            <div class="container header-container">
-                <nav class="header-nav" aria-label="Main Navigation">
-                    <div class="logo-container">
-                        <img src="/Images/01-Logos-and-Icons/BackGPT-Logo/BackGPT-Logo-Black-V2.svg" alt="BackGPT AI chatbot logo" id="BackGPT-Logo">
-                    </div>
-                    <ul class="nav-list">
-                        <!-- Navigation items here -->
-                    </ul>
-                    </div>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+        <header class="header-nav">
+
+            <img src="/Visual-Studio-Code/Images/01-Logos-and-Icons/BackGPT-Logo/BackGPT-Logo-Black-V2.svg" alt="Website Logo" id="BackGPT-Logo">
+
+                <nav class="nav-links">
+                    <li><a href="#"><img class="Home-AI-Icon" src="/Visual-Studio-Code/Images/01-Logos-and-Icons/Header-Nav-Icons/Active.svg" alt="Home AI Icon"></a></li>
+                    <li><a href="#">My Story</a></li>
+                    <li><a href="#">Relief</a></li>
                 </nav>
-                            <li class="nav__item">
-                                <a href="#home" class="home-link" aria-label="Navigate to Home">
-                                    <img src="/Images/01-Logos-and-Icons/Header-Nav-Icons/Active.svg" alt="Navigation Home AI Icon" id="nav-home-icon">
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#mystory" class="mystory-link" aria-label="Navigate to My Story">My Story</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#relief" class="relief-link" aria-label="Navigate to Relief">Relief</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+            
         </header>
+
         <main id="mainContent">
             <!-- Main content goes here -->
         </main>
@@ -48,5 +37,6 @@
             <!-- Footer content -->
         </footer>
         <script src="main.js"></script>
+   
     </body>
 </html>
