@@ -1,4 +1,4 @@
-/* Header container */
+/* Header CSS Layout */
 
 .header-nav {
     position: fixed;
@@ -11,22 +11,23 @@
     align-items: center;
 }
 
+
 #BackGPT-Logo {
     width: 272px;
     height: auto;
 }
 
-.nav-links {
+
+.nav-ul {
     display: flex;
-    height: 88px;
-    justify-content: space-between;
+    list-style-type: none;
     align-items: center;
     width: auto;
     gap: 24px;
     text-decoration: none;
-    list-style-type: none;
-  
+    list-style: none;
 }
+
 
 .nav-links a {
     height: 88px;
@@ -36,16 +37,27 @@
     align-items: center;
     line-height: 100%;
     position: relative;
-    z-index: 1;
+}
+
+
+/* Header CSS Styling */
+
+.nav-links a {
     text-decoration: none;
     list-style-type: none;
-    
      /* Headings/H3 */
      font-family: Roboto;
      font-size: 20px;
      font-style: normal;
      font-weight: 500;
      line-height: 150%; /* 30px */
+    color: var(--very-dark-black100);
+}
 
-        color: var(--very-dark-black100);
+.nav-links a:hover {
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* This makes the text take the color of the gradient */
+    transition: background 0.3s ease; /* Smooth transition for the gradient effect */
 }

@@ -60,6 +60,7 @@
       a common practice for horizontal navigation menus. */
    nav ul {
        list-style:none;
+       display: flex;
    }
    
    /* Blockquote and Quote Styling */
