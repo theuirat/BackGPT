@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Header container */
+=======
+/* Header CSS Layout */
+>>>>>>> 50658b8 (Committing header nav with CSS Layout)
 
 .header-nav {
     position: fixed;
@@ -51,7 +55,7 @@
         color: var(--very-dark-black100);
 }
 
-
+/* Header CSS Styling */
 
 
 

@@ -1,1 +1,0 @@
-exports.nakes_babes = {}
