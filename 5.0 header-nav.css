@@ -1,14 +1,14 @@
 /* Header CSS Layout */
 
 .header-nav {
-    position: fixed;
+    position: fixed; /* Fixed position when scrolling */
     height: 88px;
     width: 100%;
     padding: 88px 80px; 
     background-color: var(--white-background);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between the logo and the nav links on main axis */
+    align-items: center; /* Center the items on the cross axis */
 }
 
 
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     line-height: 100%;
-    position: relative;
+    position: relative; /* Required for pseudo-elements */
 }
 
 
@@ -52,12 +52,47 @@
      font-weight: 500;
      line-height: 150%; /* 30px */
     color: var(--very-dark-black100);
+    transition: background 0.3s ease; /* Smooth transition for the gradient effect */
 }
 
 .nav-links a:hover {
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end)); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the shape of the text (safari and chrome only) */
+    background-clip: text; /* Clip the background to the shape of the text */
+    color: transparent; /* This makes the text take the color of the gradient */
+}
+
+/* Active state with gradient text and bottom border */
+.nav-links a:active {
+    color: transparent; /* Ensures text gradient visibility */
     background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* This makes the text take the color of the gradient */
-    transition: background 0.3s ease; /* Smooth transition for the gradient effect */
 }
+
+.nav-links a:active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, var(--brand-gradient16-start), var(--brand-gradient16-end));
+    z-index: -1; /* Ensure it's behind the text */
+}
+
+.nav-links a:active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; /* Position the border */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Height of the border */
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
+    z-index: 1; /* Ensures it's above the ::before pseudo-element but below the text */
+}
+
+
+
+
+
