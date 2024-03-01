@@ -1,22 +1,19 @@
-/* Header CSS Layout COMPlET YEWW */
-
+/* Header CSS Layout */
 .header-nav {
     position: fixed; /* Fixed position when scrolling */
     height: 88px;
     width: 100%;
-    padding: 88px 80px; 
+    padding: 88px 80px;
     background-color: var(--white-background);
     display: flex; /* Flexbox layout */
     justify-content: space-between; /* Space between the logo and the nav links on main axis */
     align-items: center; /* Center the items on the cross axis */
 }
 
-
 #BackGPT-Logo {
     width: 272px;
     height: auto;
 }
-
 
 .nav-ul {
     display: flex;
@@ -28,49 +25,60 @@
     list-style: none;
 }
 
-
-.nav-links a {
+/* Ensuring anchor tags within .nav-ul have the correct positioning context */
+.nav-ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    color: var(--black-background);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
+    position: relative; /* Required for pseudo-elements */
     height: 88px;
     width: 120px;
     justify-content: center;
     display: flex;
     align-items: center;
     line-height: 100%;
-    position: relative; /* Required for pseudo-elements */
+    overflow: hidden; /* Necessary for focus state gradient border */
 }
 
+/* CSS Buttons */
+/* Default | Hover | Active | Focus */
 
-/* Header CSS Styling COMPLETE YEWW */
-
-.nav-links a {
-    text-decoration: none;
-    list-style-type: none;
-     /* Headings/H3 */
-     font-family: Roboto;
-     font-size: 20px;
-     font-style: normal;
-     font-weight: 500;
-     line-height: 150%; /* 30px */
-    color: var(--very-dark-black100);
-    transition: background 0.3s ease; /* Smooth transition for the gradient effect */
+/* Default state with smoother transition */
+.nav-ul li a {
+    color: var(--black-background); 
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
 }
 
-.nav-links a:hover {
-    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end)); /* Gradient background */
-    -webkit-background-clip: text; /* Clip the background to the shape of the text (safari and chrome only) */
-    background-clip: text; /* Clip the background to the shape of the text */
-    color: transparent; /* This makes the text take the color of the gradient */
+/* Hover and Focus state with gradient text */
+.nav-ul li a:hover {
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Updated Focus state with solid color border */
+.nav-ul li a:focus {
+    outline: none; /* Remove default focus outline */
+    position: relative;
+    box-shadow: 0 0 0 3px var(--blue-primary-informative); /* Solid color focus border */
 }
 
 /* Active state with gradient text and bottom border */
-.nav-links a:active {
-    color: transparent; /* Ensures text gradient visibility */
+.nav-ul li a:active {
+    color: transparent;
     background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
     -webkit-background-clip: text;
     background-clip: text;
 }
 
-.nav-links a:active::before {
+.nav-ul li a:active::before {
     content: '';
     position: absolute;
     top: 0;
@@ -81,7 +89,7 @@
     z-index: -1; /* Ensure it's behind the text */
 }
 
-.nav-links a:active::after {
+.nav-ul li a:active::after {
     content: '';
     position: absolute;
     bottom: -4px; /* Position the border */
@@ -92,7 +100,25 @@
     z-index: 1; /* Ensures it's above the ::before pseudo-element but below the text */
 }
 
+.nav-ul li a.clicked {
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
+/* Screen reader skip link to be visibly by only screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
 
-
-
+.skip-link:focus {
+    top: 0;
+}
