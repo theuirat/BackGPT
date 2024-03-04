@@ -1,4 +1,76 @@
    /* My Figma Design System to CSS */
+
+/* CSS Variable Application */
+:root {
+       /* nav item active variables */ 
+      
+/* 01 Styles for when nav item is being clicked "nav-item: active" */ 
+   /* 1) Active Text */ 
+   --nav-item-text-active-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-text-active-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Active Background */ 
+   --nav-item-background-active-gradient16-start: rgba(67, 116, 237, 0.16);
+   --nav-item-background-active-gradient16-end: rgba(187, 55, 189, 0.16);
+
+   /* 3) Active Bottom Border */
+   --nav-item-bottom-border-active-gradient100-start: rgb(67, 116, 237);
+   --nav-item-bottom-border-active-gradient100-end: rgb(187, 55, 189);
+
+
+
+/* 02 Styles for current page nav items ".nav-item.active" */
+   /* 1) Current Page Text */
+   --nav-item-current-page-text-active-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-current-page-text-active-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Current Page Background */
+   --nav-item-current-page-background-active-white-background: rgba(254, 254, 254, 1);
+
+   /* 3) Current Page Bottom Border */
+   --nav-item-current-page-bottom-border-active-gradient100-start: rgb(67, 116, 237);
+   --nav-item-current-page-bottom-border-active-gradient100-end: rgb(187, 55, 189);
+
+
+
+/* 03 Styles for when nav item is being hovered "nav-item:hover" */
+   /* 1) Text */
+   --nav-item-text-hover-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-text-hover-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Background */
+   --nav-item-background-hover-white-background: rgba(254, 254, 254, 1);
+
+
+
+/* 04 Styles for when nav item is being focused "nav-item:focus" */
+   /* 1) Text */
+   --nav-item-text-focus-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-text-focus-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Background */
+   --nav-item-background-focus-white-background: rgba(254, 254, 254, 1);
+
+   /* 3) All Borders */
+   --nav-item-all-border-blue-primary-informative:rgba(80, 146, 236, 1);
+
+
+
+
+/* 05 Styles for default nav */
+   /* 1) Text */
+   --nav-item-default-text-black-background: rgba(33, 33, 33, 1);
+
+   /* 2) Background */
+   --nav-item-default-background-white-background: rgba(254, 254, 254, 1);
+}
+
+
+
+
+
+
+
    :root {
     /* colour variables */
     --black-background: rgba(33, 33, 33, 1); /* Brand Colour Softer WCAG black */
