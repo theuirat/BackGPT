@@ -1,2 +1,65 @@
 
-.vscode
+1.0 Header Navigation
+    
+    1.1 Borders for ChromeDev Tools:
+
+    /* Header Navigation border layouts */
+        .header-nav{
+        border-style:dashed;
+        border-color: red;
+        border-width: 1px;    
+    }
+
+    #BackGPT-Logo {
+        border-style:dashed;
+        border-color: red;
+        border-width: 1px; 
+    }
+
+    .nav-ul {
+        border-style:dashed;
+        border-color: red;
+        border-width: 1px; 
+    }
+
+    .nav-ul li a {
+        border-style:dashed;
+        border-color: red;
+        border-width: 1px; 
+    }    
+
+    1.2 Media Queries 
+    /* Media Queries */
+
+    /* For extra small devices */
+    @media only screen and (max-width: 450px) {
+
+    }
+
+
+
+    /* For small devices */
+    @media only screen and (min-width: 451px) and (max-width: 767px) {
+        /* Styles */
+    }
+
+    /* For medium devices */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        /* Styles */
+    }
+
+    /* For large devices */
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        /* Styles */
+    }
+
+    /* For extra large devices */
+    @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+        /* Styles */
+    }
+
+    /* Optionally, for very large screens */
+    @media only screen and (min-width: 1600px) {
+        /* Styles */
+    }
+

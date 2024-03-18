@@ -21,16 +21,18 @@
     <a href="#mainContent" class="skip-link">Skip to main content</a>
 
         <header class="header-nav">
-
             <img src="/Visual-Studio-Code/Images/01-Logos-and-Icons/BackGPT-Logo/BackGPT-Logo-Black-V2.svg" alt="Website Logo" id="BackGPT-Logo">
-
-                <nav class="nav-links">
-                    <ul class="nav-ul">
-                        <li><a href="#"><img class="Home-AI-Icon" src="/Visual-Studio-Code/Images/01-Logos-and-Icons/Header-Nav-Icons/Inactive.svg" alt="Home AI Icon"></a></li>
-                        <li><a href="#">My Story</a></li>
-                        <li><a href="#">Relief</a></li>
-                    </ul>
-                </nav>
+            <nav class="nav-links">
+                <ul class="nav-ul">
+                    <!-- Toggle Button for smaller screens -->
+                    <li><a href="#" class="toggle-menu" aria-expanded="false" aria-controls="dropdownMenu"><img class="Home-AI-Icon" src="/Visual-Studio-Code/Images/01-Logos-and-Icons/Header-Nav-Icons/Inactive.svg" alt="Home"></a></li>
+                    <!-- nav ul items -->
+                    <div id="dropdownMenu" class="nav-items">
+                        <li><a href="#" class="my-story-link">My Story</a></li>
+                        <li><a href="#" class="relief-link">Relief</a></li>
+                    </div>
+                </ul>
+            </nav>
             
         </header>
 

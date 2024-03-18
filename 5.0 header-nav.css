@@ -1,4 +1,7 @@
 /* Header CSS Layout */
+
+/* Parent Container */
+
 .header-nav {
     position: fixed; /* Fixed position when scrolling */
     height: 88px;
@@ -10,11 +13,13 @@
     align-items: center; /* Center the items on the cross axis */
 }
 
+/* Logo - Flex Item 1 */
 #BackGPT-Logo {
     width: 272px;
-    height: auto;
+    height: 90px;
 }
 
+/* Navigation - Flex Item 2 */
 .nav-ul {
     display: flex;
     list-style-type: none;
@@ -25,6 +30,12 @@
     list-style: none;
 }
 
+.nav-items {
+    display: flex; /* Ensuring nav-items are displayed for large screens */
+    gap: 24px;
+}
+
+/* List Items <a> tags */
 /* Ensuring anchor tags within .nav-ul have the correct positioning context */
 .nav-ul li a {
     text-decoration: none;
@@ -45,6 +56,9 @@
     line-height: 100%;
     overflow: hidden; /* Necessary for focus state gradient border */
 }
+
+
+
 
 /* CSS Buttons */
 /* Default | Hover | Active Clicked | Active Page| Focus */
@@ -132,8 +146,131 @@
     transition: top 0.3s;
 }
 
+
+
+
+/* CSS Skip Link for Screen Readers */
 .skip-link:focus {
     top: 0;
 }
 
+
+
+
+/* Hide dropdown menu by default */
+.dropdown-menu {
+    display: none;
+    list-style: none; /* Remove bullet points */
+    position: absolute; /* Position the dropdown menu below the dropdown link */
+    background-color: #f9f9f9; /* Add a background color to the dropdown menu */
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: none;
+}
+
+
+
+
+/* Media Queries */
+
+/* For extra small devices */
+@media only screen and (max-width: 450px) {
+
+    #dropdownMenu {
+        display: none;
+    }
+
+    .header-nav {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    #BackGPT-Logo {
+        width: 208px;
+        height: 48px; 
+    }
+
+    .nav-ul li a {
+        height: 48px;
+        width: 56px;
+    }
+}
+
+/* For small devices */
+@media only screen and (min-width: 451px) and (max-width: 767px) {
+    
+    #dropdownMenu {
+        display: none;
+    }
+
+    .header-nav {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    #BackGPT-Logo {
+        width: 208px;
+        height: 48px; 
+    }
+
+    .nav-ul li a {
+        height: 48px;
+        width: 56px;
+    }
+}
+
+/* For medium devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+    #dropdownMenu {
+        display: none;
+    }
+
+    .header-nav {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    #BackGPT-Logo {
+        width: 256px;
+        height: 74px; 
+    }
+
+    .nav-ul li a {
+        height: 74px;
+    }
+}
+
+/* For large devices */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    .header-nav {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+
+    .nav-ul {
+        gap: 0px;
+    }
+}
+
+/* For extra large devices */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    
+    .header-nav {
+        padding-right: 56px;
+        padding-left: 56px;
+    }
+}
+
+/* Optionally, for very large screens */
+@media only screen and (min-width: 1600px) {
+    /* Styles */
+}
 
