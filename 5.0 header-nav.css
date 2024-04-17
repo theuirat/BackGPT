@@ -30,13 +30,9 @@
     list-style: none;
 }
 
-.nav-items {
-    display: flex; /* Ensuring nav-items are displayed for large screens */
-    gap: 24px;
-}
-
 /* List Items <a> tags */
 /* Ensuring anchor tags within .nav-ul have the correct positioning context */
+
 .nav-ul li a {
     text-decoration: none;
     list-style-type: none;
@@ -57,7 +53,27 @@
     overflow: hidden; /* Necessary for focus state gradient border */
 }
 
+.toggle-menu {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--black-background);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
+    position: relative; /* Required for pseudo-elements */
+    height: 88px;
+    width: 120px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    overflow: hidden; /* Necessary for focus state gradient border */
+}
 
+#Home-AI-Icon {
+    width: 88px;
+    height: 120px;
+    padding-top: 16px;
+    overflow: hidden;
+}
 
 
 /* CSS Buttons */
@@ -69,12 +85,21 @@
     transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
 }
 
+.toggle-menu {
+    color: rgba(33, 33, 33, 1);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
+}
+
 /* Hover state */
 .nav-ul li a:hover {
     background: linear-gradient(to right, var(--nav-item-text-hover-brand-gradient100-start), var(--nav-item-text-hover-brand-gradient100-end));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+#Home-AI-Icon:hover {
+    fill: var(--nav-item-text-active-brand-gradient100-start), var(--nav-item-text-active-brand-gradient100-end);
 }
 
 /* Active Clicked */
@@ -182,28 +207,47 @@
         display: none;
     }
 
+    #my-story {
+        display: none;
+    }
+    #relief {
+        display: none;
+    }
+
     .header-nav {
         padding-left: 24px;
         padding-right: 24px;
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     #BackGPT-Logo {
-        width: 208px;
-        height: 48px; 
+        width: 124px;
+        height: 40px; 
+    }
+
+    .nav-ul {
+        gap: 0px;
     }
 
     .nav-ul li a {
-        height: 48px;
-        width: 56px;
+        height: 40px;
+        width: 80px;
     }
+
+    #Home-AI-Icon {
+        transform: scale(0.700);
+        transform-origin: center;
+}
 }
 
 /* For small devices */
 @media only screen and (min-width: 451px) and (max-width: 767px) {
     
-    #dropdownMenu {
+    #my-story {
+        display: none;
+    }
+    #relief {
         display: none;
     }
 
@@ -219,16 +263,23 @@
         height: 48px; 
     }
 
+    .nav-ul {
+        gap: 0px;
+    }
+
     .nav-ul li a {
         height: 48px;
-        width: 56px;
+        width: 80px;
     }
 }
 
 /* For medium devices */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     
-    #dropdownMenu {
+    #my-story {
+        display: none;
+    }
+    #relief {
         display: none;
     }
 
@@ -240,6 +291,10 @@
     #BackGPT-Logo {
         width: 256px;
         height: 74px; 
+    }
+
+    .nav-ul {
+        gap: 0px;
     }
 
     .nav-ul li a {
@@ -256,7 +311,7 @@
     }
 
     .nav-ul {
-        gap: 0px;
+        gap: 8x;
     }
 }
 
