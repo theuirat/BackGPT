@@ -90,6 +90,11 @@
     transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
 }
 
+#Home-AI-Icon path {
+    fill: var(--black-background); /* Ensures the icon starts with a black fill */
+    transition: fill 0.5s ease-out; /* Smooth transition for fill change */
+}
+
 /* Hover state */
 .nav-ul li a:hover {
     background: linear-gradient(to right, var(--nav-item-text-hover-brand-gradient100-start), var(--nav-item-text-hover-brand-gradient100-end));
@@ -98,8 +103,8 @@
     color: transparent;
 }
 
-#Home-AI-Icon:hover {
-    fill: var(--nav-item-text-active-brand-gradient100-start), var(--nav-item-text-active-brand-gradient100-end);
+#Home-AI-Icon:hover path {
+    fill: url(#svg-gradient-hover); /* Corrected to match the defined gradient ID */
 }
 
 /* Active Clicked */
@@ -259,7 +264,7 @@
     }
 
     #BackGPT-Logo {
-        width: 208px;
+        width: 152px;
         height: 48px; 
     }
 
@@ -270,6 +275,11 @@
     .nav-ul li a {
         height: 48px;
         width: 80px;
+    }
+
+    #Home-AI-Icon {
+        transform: scale(0.900);
+        transform-origin: center;
     }
 }
 
@@ -289,7 +299,7 @@
     }
 
     #BackGPT-Logo {
-        width: 256px;
+        width: 168px;
         height: 74px; 
     }
 
@@ -300,18 +310,38 @@
     .nav-ul li a {
         height: 74px;
     }
+
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
+    }
 }
 
 /* For large devices */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     
+      
     .header-nav {
         padding-right: 48px;
         padding-left: 48px;
     }
 
+    #BackGPT-Logo {
+        width: 168px;
+        height: 74px; 
+    }
+
     .nav-ul {
-        gap: 8x;
+        gap: 0px;
+    }
+
+    .nav-ul li a {
+        height: 74px;
+    }
+
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
     }
 }
 
