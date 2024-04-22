@@ -69,12 +69,21 @@
     transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
 }
 
+#Home-AI-Icon path {
+    fill: var(--black-background); /* Ensures the icon starts with a black fill */
+    transition: fill 0.5s ease-out; /* Smooth transition for fill change */
+}
+
 /* Hover state */
 .nav-ul li a:hover {
     background: linear-gradient(to right, var(--nav-item-text-hover-brand-gradient100-start), var(--nav-item-text-hover-brand-gradient100-end));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+#Home-AI-Icon:hover path {
+    fill: url(#svg-gradient-hover); /* Corrected to match the defined gradient ID */
 }
 
 /* Active Clicked */
