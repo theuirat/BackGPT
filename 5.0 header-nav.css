@@ -198,6 +198,11 @@
         height: 48px;
         width: 56px;
     }
+
+    #Home-AI-Icon {
+        transform: scale(0.700);
+        transform-origin: center;
+}
 }
 
 /* For small devices */
@@ -223,6 +228,13 @@
         height: 48px;
         width: 56px;
     }
+
+    #Home-AI-Icon {
+        transform: scale(0.900);
+        transform-origin: center;
+    }
+
+    
 }
 
 /* For medium devices */
@@ -245,6 +257,11 @@
     .nav-ul li a {
         height: 74px;
     }
+
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
+    }
 }
 
 /* For large devices */
@@ -255,8 +272,22 @@
         padding-left: 48px;
     }
 
+    #BackGPT-Logo {
+        width: 168px;
+        height: 74px; 
+    }
+
     .nav-ul {
         gap: 0px;
+    }
+
+    .nav-ul li a {
+        height: 74px;
+    }
+
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
     }
 }
 
