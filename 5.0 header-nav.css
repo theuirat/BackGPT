@@ -379,6 +379,7 @@
 
     #Home-AI-Icon {
         transform: scale(0.800);
+        transform: scale(0.900);
         transform-origin: center;
     }
 }
@@ -388,6 +389,9 @@
     /* Styles */
     #Home-AI-Icon {
         transform: scale(0.800);
+
+    #Home-AI-Icon {
+        transform: scale(0.900);
         transform-origin: center;
     }
 }
