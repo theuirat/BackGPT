@@ -1,0 +1,361 @@
+/* Header CSS Layout */
+
+/* Parent Container */
+
+.header-nav {
+    position: fixed; /* Fixed position when scrolling */
+    height: 88px;
+    width: 100%;
+    padding: 88px 80px;
+    background-color: rgba(254, 254, 254, 1);
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between the logo and the nav links on main axis */
+    align-items: center; /* Center the items on the cross axis */
+}
+
+/* Logo - Flex Item 1 */
+#BackGPT-Logo {
+    width: 272px;
+    height: 90px;
+}
+
+/* Navigation - Flex Item 2 */
+.nav-ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    width: auto;
+    gap: 24px;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* List Items <a> tags */
+/* Ensuring anchor tags within .nav-ul have the correct positioning context */
+
+.nav-ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    color: var(--black-background);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
+    position: relative; /* Required for pseudo-elements */
+    height: 88px;
+    width: 120px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    overflow: hidden; /* Necessary for focus state gradient border */
+}
+
+.toggle-menu {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--black-background);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
+    position: relative; /* Required for pseudo-elements */
+    height: 88px;
+    width: 120px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    overflow: hidden; /* Necessary for focus state gradient border */
+}
+
+#Home-AI-Icon {
+    width: 88px;
+    height: 120px;
+    padding-top: 16px;
+    overflow: hidden;
+}
+
+
+/* CSS Buttons */
+/* Default | Hover | Active Clicked | Active Page| Focus */
+
+/* Default state */
+.nav-ul li a {
+    color: rgba(33, 33, 33, 1);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
+}
+
+.toggle-menu {
+    color: rgba(33, 33, 33, 1);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
+}
+
+#Home-AI-Icon path {
+    fill: var(--black-background); /* Ensures the icon starts with a black fill */
+    transition: fill 0.5s ease-out; /* Smooth transition for fill change */
+}
+
+/* Hover state */
+.nav-ul li a:hover {
+    background: linear-gradient(to right, var(--nav-item-text-hover-brand-gradient100-start), var(--nav-item-text-hover-brand-gradient100-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#Home-AI-Icon:hover path {
+    fill: url(#svg-gradient-hover); /* Corrected to match the defined gradient ID */
+}
+
+/* Active Clicked */
+.nav-ul li a:active {
+    color: transparent;
+    background: linear-gradient(to right, var(--nav-item-text-active-brand-gradient100-start), var(--nav-item-text-active-brand-gradient100-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+}
+
+.nav-ul li a:active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, var(--nav-item-background-active-gradient16-start), var(--nav-item-background-active-gradient16-end));
+    z-index: -1; /* Ensure it's behind the text */
+}
+
+.nav-ul li a:active::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; /* Position the border */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Height of the border */
+    background: linear-gradient(to right, var(--nav-item-bottom-border-active-gradient100-start), var(--nav-item-bottom-border-active-gradient100-end));
+    z-index: 1; /* Ensures it's above the ::before pseudo-element but below the text */
+}
+
+/* Current Page */
+.nav-ul li a.clicked {
+    background: white; /* Set the background color to white */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end)); /* Set the text color with --brand-gradient100 */
+}
+
+.nav-ul li a.clicked::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the border at the bottom of the <a> tag */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Height of the border */
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end)); /* Set the bottom border color with --brand-gradient100 */
+    z-index: 2; /* Ensures it's above the parent element and the ::before pseudo-element but below the text */
+}
+
+/* Focus state */
+.nav-ul li a:focus {
+    outline: none; /* Remove default focus outline */
+    position: relative;
+    box-shadow: 0 0 0 3px rgba(80, 146, 236, 1); /* Solid color focus border */
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: linear-gradient(to right, var(--brand-gradient100-start), var(--brand-gradient100-end));
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+
+
+
+/* CSS Skip Link for Screen Readers */
+.skip-link:focus {
+    top: 0;
+}
+
+
+
+
+/* Hide dropdown menu by default */
+.dropdown-menu {
+    display: none;
+    list-style: none; /* Remove bullet points */
+    position: absolute; /* Position the dropdown menu below the dropdown link */
+    background-color: #f9f9f9; /* Add a background color to the dropdown menu */
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: none;
+}
+
+
+
+
+/* Media Queries */
+
+/* For extra small devices */
+@media only screen and (max-width: 450px) {
+
+    #dropdownMenu {
+        display: none;
+    }
+
+    #my-story {
+        display: none;
+    }
+    #relief {
+        display: none;
+    }
+
+    .header-nav {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    #BackGPT-Logo {
+        width: 124px;
+        height: 40px; 
+    }
+
+    .nav-ul {
+        gap: 0px;
+    }
+
+    .nav-ul li a {
+        height: 40px;
+        width: 80px;
+    }
+
+    #Home-AI-Icon {
+        transform: scale(0.700);
+        transform-origin: center;
+}
+}
+
+/* For small devices */
+@media only screen and (min-width: 451px) and (max-width: 767px) {
+    
+    #my-story {
+        display: none;
+    }
+    #relief {
+        display: none;
+    }
+
+    .header-nav {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    #BackGPT-Logo {
+        width: 152px;
+        height: 48px; 
+    }
+
+    .nav-ul {
+        gap: 0px;
+    }
+
+    .nav-ul li a {
+        height: 48px;
+        width: 80px;
+    }
+
+    #Home-AI-Icon {
+        transform: scale(0.900);
+        transform-origin: center;
+    }
+}
+
+/* For medium devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+    #my-story {
+        display: none;
+    }
+    #relief {
+        display: none;
+    }
+
+    .header-nav {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    #BackGPT-Logo {
+        width: 168px;
+        height: 74px; 
+    }
+
+    .nav-ul {
+        gap: 0px;
+    }
+
+    .nav-ul li a {
+        height: 74px;
+    }
+
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
+    }
+}
+
+/* For large devices */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+      
+    .header-nav {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+
+    #BackGPT-Logo {
+        width: 168px;
+        height: 74px; 
+    }
+
+    .nav-ul {
+        gap: 0px;
+    }
+
+    .nav-ul li a {
+        height: 74px;
+    }
+
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
+    }
+}
+
+/* For extra large devices */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    
+    .header-nav {
+        padding-right: 56px;
+        padding-left: 56px;
+    }
+}
+
+/* Optionally, for very large screens */
+@media only screen and (min-width: 1600px) {
+    /* Styles */
+}
+

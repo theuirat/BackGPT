@@ -1,0 +1,12 @@
+/* Global Layout and Box Model Setting */
+
+/*Box Sizing: The box-sizing: border-box; setting makes it easier to design UIs because it ensures that 
+padding and borders are included within the element's dimensions. This means when you set a width and 
+height in Figma, it translates more directly to CSS.
+
+  /* Applies to everything, ensuring box-sizing is border-box */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+   
+  

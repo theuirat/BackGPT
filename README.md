@@ -2,6 +2,8 @@
 
 The objectives of this project are
 
+<<<<<<< HEAD
+
 A. Move UI from Figma to the web
 
 B. Make web content accessible
@@ -11,3 +13,5 @@ C. Interface a customGPT
 D. Get medical back journals into GPT
 
 E. Help people in my situation
+
+>>>>>>> feature/header-svg-optomisation

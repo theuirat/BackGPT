@@ -1,0 +1,220 @@
+   /* My Figma Design System to CSS */
+
+/* CSS Variable Application */
+:root {
+       /* nav item active variables */ 
+      
+/* 01 Styles for when nav item is being clicked "nav-item: active" */ 
+   /* 1) Active Text */ 
+   --nav-item-text-active-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-text-active-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Active Background */ 
+   --nav-item-background-active-gradient16-start: rgba(67, 116, 237, 0.16);
+   --nav-item-background-active-gradient16-end: rgba(187, 55, 189, 0.16);
+
+   /* 3) Active Bottom Border */
+   --nav-item-bottom-border-active-gradient100-start: rgb(67, 116, 237);
+   --nav-item-bottom-border-active-gradient100-end: rgb(187, 55, 189);
+
+
+
+/* 02 Styles for current page nav items ".nav-item.active" */
+   /* 1) Current Page Text */
+   --nav-item-current-page-text-active-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-current-page-text-active-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Current Page Background */
+   --nav-item-current-page-background-active-white-background: rgba(254, 254, 254, 1);
+
+   /* 3) Current Page Bottom Border */
+   --nav-item-current-page-bottom-border-active-gradient100-start: rgb(67, 116, 237);
+   --nav-item-current-page-bottom-border-active-gradient100-end: rgb(187, 55, 189);
+
+
+
+/* 03 Styles for when nav item is being hovered "nav-item:hover" */
+   /* 1) Text */
+   --nav-item-text-hover-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-text-hover-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Background */
+   --nav-item-background-hover-white-background: rgba(254, 254, 254, 1);
+
+
+
+/* 04 Styles for when nav item is being focused "nav-item:focus" */
+   /* 1) Text */
+   --nav-item-text-focus-brand-gradient100-start: rgb(67, 116, 237);
+   --nav-item-text-focus-brand-gradient100-end: rgb(187, 55, 189);
+
+   /* 2) Background */
+   --nav-item-background-focus-white-background: rgba(254, 254, 254, 1);
+
+   /* 3) All Borders */
+   --nav-item-all-border-blue-primary-informative:rgba(80, 146, 236, 1);
+
+
+
+
+/* 05 Styles for default nav */
+   /* 1) Text */
+   --nav-item-default-text-black-background: rgba(33, 33, 33, 1);
+
+   /* 2) Background */
+   --nav-item-default-background-white-background: rgba(254, 254, 254, 1);
+}
+
+
+
+
+
+
+
+   :root {
+    /* colour variables */
+    --black-background: rgba(33, 33, 33, 1); /* Brand Colour Softer WCAG black */
+    --white-background: rgba(254, 254, 254, 1); /* Brand Colour Softer WCAG white */  
+    --brand-gradient100-start: rgb(67, 116, 237); /* Brand Colour Gradient */
+    --brand-gradient100-end: rgb(187, 55, 189);
+    
+    --brand-gradient75-start: rgba(67, 116, 237, 0.75);
+    --brand-gradient75-end: rgba(187, 55, 189, 0.75);
+    --brand-gradient50-start: rgba(67, 116, 237, 0.50);
+    --brand-gradient50-end: rgba(187, 55, 189, 0.50);
+    --brand-gradient25-start: rgba(67, 116, 237, 0.25);
+    --brand-gradient25-end: rgba(187, 55, 189, 0.25);
+    --brand-gradient16-start: rgba(67, 116, 237, 0.16);
+    --brand-gradient16-end: rgba(187, 55, 189, 0.16);
+    --gradient-shades-border-start: rgb(107, 223, 166); 
+    --gradient-shades-border-end: rgb(187, 55, 189); 
+    
+    --very-dark-black100:rgba(0, 0, 0, 1);  
+    --dark-black75:rgba(26, 26, 26, 1);
+    --light-black50:rgba(51, 51, 51, 1);
+    --very-light-black25:rgba(77, 77, 77, 1);
+    
+    --very-dark-grey100:rgba(102, 102, 102, 1);
+    --dark-grey75:rgba(159, 160, 167, 1); /* inactive text */   
+    --light-grey50:rgba(204, 204, 204, 1); /* inactive icon */
+    --very-light-grey25:rgba(230, 230, 230, 1);
+    
+    --green-primary-positive:rgba(62, 140, 97, 1);
+    --blue-primary-informative:rgba(80, 146, 236, 1);
+    --orange-primary-notice:rgba(232, 138, 63, 1);
+    --red-primary-negative:rgba(216, 72, 54, 1);
+    --green-secondary-positive-tint: rgba(215, 248, 225, 1);
+    --blue-secondary-informative-tint: rgba(175, 203, 255, 1);
+    --orange-secondary-notice-tint: rgba(255, 193, 127, 1);
+    --red-secondary-negative-tint: rgba(255, 183, 170, 1);
+   }
+    /* end of colour pallate */
+    
+    /* typography variables */
+    :root {
+    
+    --font-primary: 'roboto', sans-serif;
+    
+    /* Headings/H1 */
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 42px */
+    
+    /* Headings/H2 */
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+    
+    /* Headings/H3 */
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    
+    /* Headings/H4 */
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    
+    /* Headings/H5 */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    
+    /* Desktop Body Text */
+    /* Text/Desktop Light */
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 27px */
+    
+    /* Text/Desktop Reg */
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    
+    /* Text/Mobile Light */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 24px */
+    
+    /* Text/Mobile Reg */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    
+    /* Text/Mobile Small Light */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 18px */
+    
+    /* Text/Mobile Small Regular */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 18px */
+    
+    /* Text/Mobile Bold */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 18px */
+    
+    /* Text/Label Normal */
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    
+    /* Text/Label capitalised */
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    text-transform: uppercase;
+    
+    /* end of typography variables */
+    }
+    
