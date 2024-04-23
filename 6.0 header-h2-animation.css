@@ -1,1 +1,51 @@
+/* Header H2 Animation CSS Styling */
+
+/* Parent Container */
+.header-h2-animation {
+    /* centering parent container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+     /* creating parent size */
+    height: 88px;
+    width: 100%;
+    top: 264px;
+   
+
+    /* adjusting content within parent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style:dashed;
+    border-color: red;
+    border-width: 1px; 
+}
+
+.typing-effect {
+    /* text styling */
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+    color: var(--black-background);
+    text-decoration: none;
+    text-transform: none;
+
+    /* animation styling */
+    overflow: hidden;
+    border-right: 2px solid var(--black-background);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+    /* cursor blinking */
+    @keyframes cursor {
+     50% { border-color: transparent; }
+    }
+
 

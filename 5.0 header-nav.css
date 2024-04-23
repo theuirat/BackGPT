@@ -1,9 +1,8 @@
-/* Header CSS Layout */
+/* Header Nav CSS Layout */
 
 /* Parent Container */
-
 .header-nav {
-    position: fixed; /* Fixed position when scrolling */
+    position: relative; /* moving out of view as user scrolls */
     height: 88px;
     width: 100%;
     padding: 88px 80px; 
@@ -11,6 +10,10 @@
     display: flex; /* Flexbox layout */
     justify-content: space-between; /* Space between the logo and the nav links on main axis */
     align-items: center; /* Center the items on the cross axis */
+
+    border-style:dashed;
+    border-color: red;
+    border-width: 1px; 
 }
 
 /* Logo - Flex Item 1 */
