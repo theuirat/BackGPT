@@ -63,10 +63,16 @@
 
    /* 2) Background */
    --nav-item-default-background-white-background: rgba(254, 254, 254, 1);
+
+
+/* 06 Styles for header-h2-animation */
+   /* 1) Non-animated text */
+   --header-h2-animation-text-black: rgba(33, 33, 33, 1);
+
+   /* 2) Animated text */
+   --header-h2-animation-text-gradient100-start: rgb(67, 116, 237);
+   --header-h2-animation-text-gradient100-end: rgb(187, 55, 189);
 }
-
-
-
 
 
 

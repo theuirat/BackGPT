@@ -6,8 +6,8 @@
     position: fixed; /* Fixed position when scrolling */
     height: 88px;
     width: 100%;
-    padding: 88px 80px;
-    background-color: rgba(254, 254, 254, 1);
+    padding: 88px 80px; 
+    background-color: var(--white-background);
     display: flex; /* Flexbox layout */
     justify-content: space-between; /* Space between the logo and the nav links on main axis */
     align-items: center; /* Center the items on the cross axis */
@@ -57,6 +57,12 @@
     overflow: hidden; /* Necessary for focus state gradient border */
 }
 
+#Home-AI-Icon {
+    width: 88px;
+    height: 120px;
+    padding-top: 16px;
+    overflow: hidden;
+}
 
 
 
@@ -65,7 +71,7 @@
 
 /* Default state */
 .nav-ul li a {
-    color: rgba(33, 33, 33, 1);
+    color: var(--nav-item-default-text-black-background);
     transition: color 0.5s ease-out, background-color 0.5s ease-out, border-bottom-color 0.5s ease-out, background-size 0.5s ease-out;
 }
 
@@ -307,10 +313,19 @@
         padding-right: 56px;
         padding-left: 56px;
     }
+
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
+    }
 }
 
 /* Optionally, for very large screens */
 @media only screen and (min-width: 1600px) {
     /* Styles */
+    #Home-AI-Icon {
+        transform: scale(0.800);
+        transform-origin: center;
+    }
 }
 
