@@ -34,6 +34,22 @@
     width: 2px;
     height: 20px;
     background-color: var(--black-background);
-    margin-left: 8px;
+    margin-left: 4px;
 }
+
+/* input-cursor blinking animation */
+@keyframes cursor-blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+/* inside input-cursor */
+#input-cursor {
+    animation: cursor-blink .6s linear infinite alternate;
+}
+
+/* The reason for using 0–40% and 60–100% pattern instead of just opacity 1 in 0% and opacity 0 in 100% is, if you observe a typing cursor, it doesn’t gradually “disappear”. Instead, it will stay visible for a while, then suddenly, completely disappear for a while. This pattern repeat itself */
+
 
